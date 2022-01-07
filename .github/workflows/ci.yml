@@ -1,9 +1,9 @@
 name: GithubActions Pipeline CI
 
-on: pull_request
+on: push
 
 jobs:
-  test:
+  lint:
   runs-on: ubuntu-latest
   steps:
       - uses: actions/checkout@v2
@@ -14,5 +14,5 @@ jobs:
       - name: deps
         run: mix deps.get
       - name: LINT CODE
-      - run: mix credo --strict
+        run: mix credo --strict
 
