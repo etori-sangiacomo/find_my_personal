@@ -57,3 +57,14 @@ jobs:
         run: mix deps.get
       - name: Tests
         run: mix test
+    services:
+      pg:
+        image: postgres:12
+        ports: ['5432:5432']
+        env:
+          POSTGRES_PASSWORD: postgres
+          options: >-
+            --health-cmd pg_isready
+            --health-interval 10s
+            --health-timeout 5s
+            --heath-retries 5s
