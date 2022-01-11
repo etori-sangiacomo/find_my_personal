@@ -5,7 +5,7 @@ defmodule FindMyPersonal.MixProject do
     [
       app: :find_my_personal,
       version: "0.1.0",
-      elixir: "~> 1.7",
+      elixir: "~> 1.12",
       description: "Project to connect people and personal trainer",
       docs: [
         main: "readme",
